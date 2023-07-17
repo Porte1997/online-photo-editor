@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- link boxIcons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="container disable">
+        <h2>Online Image Editor</h2>
+        <div class="wrapper">
+            <section class="left-section">
+                <div class="filter">
+                    <label class="title">Filters</label>
+                    <div class="options">
+                        <div id="brightness" class="active"><img src="./icons/brightness.png" alt="brightness"/>Brightness</div>
+                        <button id="saturation">Saturation</button>
+                        <button id="inversion">Inversion</button>
+                        <button id="grayscale">Grayscale</button>
+                    </div>
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Brightness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value='100' max="200" min="0" name="" id="">
+                    </div>
+                </div>
+                <div class="rotate-flip">
+                    <label class="title">Rotate & Flip</label>
+                    <div class="options">
+                        <button id="left"><i class='bx bx-rotate-left'></i></button>
+                        <button id="right"><i class='bx bx-rotate-right' ></i></button>
+                        <button id="horizontal"><i class='bx bx-reflect-vertical' ></i></button>
+                        <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
+                    </div>
+                </div>
+            </section>
+            <section class="preview-img">
+                <img src="./icons/bg1.jpg" alt="preview-img">
+            </section>
+        </div>
+        <div class="controls">
+            <button class="reset-filter">RESET FILTERS</button>
+            <div class="row">
+                <input type="file" class="input-img" accept="image/*" hidden>
+                <button class="choose-img-btn">CHOOSE IMAGE</button>
+                <button class="save-img-btn">SAVE IMAGE</button>
+            </div>
+        </div>
+    </div>
+    <script src="editor.js"></script>
+</body>
+</html>
